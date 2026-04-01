@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLE/SIGNAL | Streetwear & Sneaker Tracker</title>
+    <meta
+      name="description"
+      content="A Gen Z-inspired sneaker and streetwear tracker built with HTML, CSS, and JavaScript."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand-mark">
+            <span class="brand-mark__dot"></span>
+            <span>SOLE/SIGNAL</span>
+          </div>
+          <div class="topbar__meta">
+            <span>Streetwear Index</span>
+            <span id="liveDate">Loading date...</span>
+          </div>
+        </nav>
+
+        <section class="hero__content">
+          <div class="hero__copy">
+            <p class="eyebrow">Curated market pulse</p>
+            <h1>Track the hottest sneakers with a clean, premium vibe.</h1>
+            <p class="hero__text">
+              Browse upcoming drops, compare retail and resale, filter by brand,
+              and build your watchlist with a UI inspired by fashion editorials
+              and modern product storytelling.
+            </p>
+            <div class="hero__actions">
+              <a href="#tracker" class="button button--primary">Explore the grid</a>
+              <button class="button button--ghost" id="surpriseMeBtn" type="button">
+                Surprise me
+              </button>
+            </div>
+          </div>
+
+          <aside class="hero__panel" id="featuredPanel">
+            <p class="panel-label">Featured heat</p>
+            <div class="featured-card__visual">
+              <img class="featured-card__image" alt="" />
+            </div>
+            <div class="featured-card__body">
+              <p class="featured-card__name">Loading spotlight...</p>
+              <p class="featured-card__meta">Syncing release data</p>
+            </div>
+          </aside>
+        </section>
+      </header>
+
+      <main>
+        <section class="stats-grid" id="statsGrid">
+          <article class="stat-card">
+            <span class="stat-card__label">Pairs tracked</span>
+            <strong>--</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">Average resale</span>
+            <strong>--</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">Top brand</span>
+            <strong>--</strong>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">Watchlist</span>
+            <strong>0</strong>
+          </article>
+        </section>
+
+        <section class="dashboard" id="tracker">
+          <div class="dashboard__intro">
+            <div>
+              <p class="eyebrow">Live-style experience</p>
+              <h2>Streetwear tracker</h2>
+            </div>
+          </div>
+
+          <div class="control-panel">
+            <label class="control">
+              <span>Search</span>
+              <input type="search" id="searchInput" placeholder="Search name, silhouette, color..." />
+            </label>
+
+            <label class="control">
+              <span>Brand</span>
+              <select id="brandFilter">
+                <option value="all">All brands</option>
+              </select>
+            </label>
+
+            <label class="control">
+              <span>Category</span>
+              <select id="categoryFilter">
+                <option value="all">All categories</option>
+              </select>
+            </label>
+
+            <label class="control">
+              <span>Sort by</span>
+              <select id="sortSelect">
+                <option value="release-soon">Release date</option>
+                <option value="resell-high">Highest resale</option>
+                <option value="retail-low">Lowest retail</option>
+                <option value="hype-high">Highest hype</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="dashboard__body">
+            <section class="product-grid-section">
+              <div class="section-heading">
+                <h3>Drop monitor</h3>
+                <p id="resultsLabel">Loading collection...</p>
+              </div>
+              <div class="product-grid" id="productGrid"></div>
+            </section>
+
+            <aside class="insight-panel">
+              <div class="insight-card" id="trendCard">
+                <p class="panel-label">Trend note</p>
+                <h3>Loading trend signal...</h3>
+                <p>Crunching ratios and watchlist energy.</p>
+              </div>
+
+              <div class="insight-card">
+                <p class="panel-label">Watchlist</p>
+                <div id="watchlist" class="watchlist"></div>
+              </div>
+
+              <div class="insight-card">
+                <p class="panel-label">Why it hits</p>
+                <ul class="feature-list">
+                  <li>Premium editorial layout with a clean streetwear mood</li>
+                  <li>Fast search, sorting, and filter controls</li>
+                  <li>Featured drop spotlight with live-style market stats</li>
+                  <li>Personal watchlist to save pairs you want to track</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="productCardTemplate">
+      <article class="product-card">
+        <div class="product-card__visual">
+          <div class="product-card__glow"></div>
+          <span class="product-card__badge"></span>
+          <img class="product-card__image" alt="" loading="lazy" />
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__topline">
+            <span class="product-card__brand"></span>
+            <span class="product-card__release"></span>
+          </div>
+          <h4 class="product-card__name"></h4>
+          <p class="product-card__color"></p>
+          <div class="price-row">
+            <div>
+              <span>Retail</span>
+              <strong class="product-card__retail"></strong>
+            </div>
+            <div>
+              <span>Resell</span>
+              <strong class="product-card__resell"></strong>
+            </div>
+          </div>
+          <div class="product-card__footer">
+            <span class="product-card__hype"></span>
+            <button type="button" class="save-button">Save</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

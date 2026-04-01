@@ -1,0 +1,98 @@
+[
+  {
+    "id": "aj1-retro-high",
+    "name": "Air Jordan 1 Retro High",
+    "brand": "Jordan",
+    "category": "Basketball",
+    "colorway": "Sail / Crimson / Black",
+    "releaseDate": "2026-04-18",
+    "retailPrice": 190,
+    "resellPrice": 340,
+    "hypeScore": 94,
+    "palette": ["#f7b093", "#2b2b2b"]
+  },
+  {
+    "id": "dunk-low-shift",
+    "name": "Dunk Low Shift",
+    "brand": "Nike",
+    "category": "Lifestyle",
+    "colorway": "Ivory / Volt / Smoke",
+    "releaseDate": "2026-04-12",
+    "retailPrice": 125,
+    "resellPrice": 205,
+    "hypeScore": 83,
+    "palette": ["#edf7a6", "#b9d8df"]
+  },
+  {
+    "id": "993-core-shadow",
+    "name": "993 Core Shadow",
+    "brand": "New Balance",
+    "category": "Runner",
+    "colorway": "Grey / Silver / White",
+    "releaseDate": "2026-05-02",
+    "retailPrice": 210,
+    "resellPrice": 265,
+    "hypeScore": 78,
+    "palette": ["#d6d4cf", "#8fa0aa"]
+  },
+  {
+    "id": "gel-kayano-kulture",
+    "name": "Gel-Kayano Kulture",
+    "brand": "ASICS",
+    "category": "Runner",
+    "colorway": "Sand / Aqua / Navy",
+    "releaseDate": "2026-04-27",
+    "retailPrice": 180,
+    "resellPrice": 244,
+    "hypeScore": 80,
+    "palette": ["#d4c3af", "#8ad6e1"]
+  },
+  {
+    "id": "campus-00s-fade",
+    "name": "Campus 00s Fade",
+    "brand": "Adidas",
+    "category": "Skate",
+    "colorway": "Almond / Gum / Olive",
+    "releaseDate": "2026-04-09",
+    "retailPrice": 110,
+    "resellPrice": 170,
+    "hypeScore": 74,
+    "palette": ["#e6dcc7", "#9aa57d"]
+  },
+  {
+    "id": "vomero-vision",
+    "name": "Vomero Vision",
+    "brand": "Nike",
+    "category": "Runner",
+    "colorway": "Silver / Blue Tint / Peach",
+    "releaseDate": "2026-05-11",
+    "retailPrice": 160,
+    "resellPrice": 238,
+    "hypeScore": 86,
+    "palette": ["#c8d1dd", "#f3bf9f"]
+  },
+  {
+    "id": "samba-luxe",
+    "name": "Samba Luxe Studio",
+    "brand": "Adidas",
+    "category": "Lifestyle",
+    "colorway": "Cream / Espresso / Gum",
+    "releaseDate": "2026-04-21",
+    "retailPrice": 135,
+    "resellPrice": 198,
+    "hypeScore": 76,
+    "palette": ["#f1e4cf", "#4c362d"]
+  },
+  {
+    "id": "1906r-future-grid",
+    "name": "1906R Future Grid",
+    "brand": "New Balance",
+    "category": "Runner",
+    "colorway": "Ice Grey / Lime / Slate",
+    "releaseDate": "2026-04-30",
+    "retailPrice": 170,
+    "resellPrice": 252,
+    "hypeScore": 88,
+    "palette": ["#d8dbe0", "#cbff66"]
+  }
+]
